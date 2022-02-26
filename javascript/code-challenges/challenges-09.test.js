@@ -147,7 +147,7 @@ const hasChildrenValues = (arr, character) => {
   let hasChildren;
   for(let i = 0 ; i < arr.length; i++){
     let newArr = Object.values(arr[i]);
-    if(newArr.length > 3 && newArr[0] === character){
+    if(newArr.length > 3 && newArr [0] === character){
       hasChildren = true;
       break;
     }else{

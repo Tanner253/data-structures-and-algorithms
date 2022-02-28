@@ -100,7 +100,7 @@ const grandTotal = (stores) => {
   let arr = [];
   for (let i = 0; i < hoursOpen.length; i++) {
     let accum = 0;
-    for (let j = 0; j < stores.length; j++) {
+    for (let j = 0; j < stores.length ; j++) {
       accum += stores[j][i];
     }
     arr.push(accum);
@@ -119,19 +119,14 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  let salesObjArray = [];
-  let hourlyArray = grandTotal(cookieStores);
-  hourlyArray.forEach((data) => {
-    let salesObj = {
-      sales: `${data} cookies`,
-    };
-    salesObjArray.push(salesObj);
+  let arr = [];
+  data.foreach((hour, index) => {
+    arr.push({
+      sales: `${hour} cookies`,
+      time: `${hours[index]}`
+    });
   });
-  for (let i = 0; i < salesObjArray; i++) {
-    hours = hoursOpen[i];
-    salesObjArray[i].time = hours;
-  }
-  return salesObjArray;
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -168,7 +163,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return arr[2].items[2].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------

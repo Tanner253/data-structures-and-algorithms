@@ -160,7 +160,6 @@ let findMaleAndFemale = (data) => {
 };
 
 //got help from andres on this one
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 

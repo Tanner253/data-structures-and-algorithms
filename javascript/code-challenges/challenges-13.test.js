@@ -45,7 +45,9 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
+  let newArr = [];
+  arr.map(string => string.includes(':)') ? newArr.push(string): string);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,7 +59,13 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+  let number = '';
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] !== '(' && ')' && ' ' && '-'){
+      number += arr[i];
+    }
+  }
+  return number;
 };
 
 /* ------------------------------------------------------------------------------------------------

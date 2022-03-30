@@ -8,6 +8,7 @@ class Node {
 class LinkedList {
   constructor() {
     this.head = null;
+    this.size = 1;
   }
 
   traverse() {
@@ -23,6 +24,7 @@ class LinkedList {
       if (!this.head) {
         this.head = newNode;
       } else {
+        this.size++;
         newNode.next = this.head;
         this.head = newNode;
       }
@@ -36,6 +38,7 @@ class LinkedList {
       while (current.next) {
         current = current.next;
       }
+      this.size++;
       current.next = new Node(value);
       current.next.next = null;
     } catch (e) {
@@ -68,6 +71,7 @@ class LinkedList {
     let temp = current.next;
     current.next = new Node(value);
     current.next.next = temp;
+    this.size++;
   }
 
   insertAfter(insertAfter, value){
@@ -78,6 +82,7 @@ class LinkedList {
     let temp = current.next;
     current.next = new Node(value);
     current.next.next = temp;
+    this.size++;
   }
 
   toString() {
@@ -93,6 +98,16 @@ class LinkedList {
     } catch (e) {
       console.error(e);
     }
+  }
+
+  kthFromTheEnd(k){
+    let current = this.head;
+    let idx = this.size - k;
+    for(var i = 0 ; i < idx ; i++){
+      current = current.next;
+    }
+    console.log(current.val);
+    return current.val;
   }
 }
 let ll = new LinkedList();
@@ -111,5 +126,7 @@ ll.insertBefore(8888, 7777);
 console.log(ll.toString());
 ll.insertAfter(999, 222);
 console.log(ll.toString());
+console.log(ll.size);
+ll.kthFromTheEnd(3);
 
 module.exports = { LinkedList, Node };

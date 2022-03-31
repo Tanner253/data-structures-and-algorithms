@@ -7,4 +7,4 @@
 - Insertion: O(1)
 - Deletion: O(1)
 
-Will add whiteboards soon!
+Will add whiteboards soon

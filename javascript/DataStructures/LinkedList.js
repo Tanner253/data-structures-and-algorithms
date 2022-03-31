@@ -112,7 +112,7 @@ class LinkedList {
   }
 }
 function zip(list1, list2){ 
-
+  
 }
 
 

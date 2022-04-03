@@ -29,7 +29,7 @@ class LinkedList {
         this.head = newNode;
       }
     } catch (error) {
-      console.log("Error with adding a Node to the HEAD: ", error);
+      console.log('Error with adding a Node to the HEAD: ', error);
     }
   }
   append(value) {
@@ -51,12 +51,12 @@ class LinkedList {
       let current = this.head;
       while (current !== null) {
         if (current.val === value) {
-          console.log("true");
+          console.log('true');
           return true;
         }
         current = current.next;
       }
-      console.log("false");
+      console.log('false');
       return false;
     } catch (e) {
       console.error(e);
@@ -88,13 +88,14 @@ class LinkedList {
   toString() {
     try {
       let current = this.head;
-      let output = "";
+      let output = '';
       while (current !== null) {
         output += `[ ${current.val} ] -> `;
         current = current.next;
       }
-      output += "NULL";
+      output += 'NULL';
       console.log(output);
+      return output;
     } catch (e) {
       console.error(e);
     }
@@ -110,6 +111,23 @@ class LinkedList {
     return current.val;
   }
 }
+function zip(list1, list2){ 
+  
+}
+
+
+
+let primaryList = new LinkedList();
+primaryList.insertHead(4);
+primaryList.insertHead(5);
+primaryList.insertHead(6);
+let mergeList = new LinkedList();
+mergeList.insertHead(1);
+mergeList.insertHead(2);
+mergeList.insertHead(3);
+
+zip(primaryList, mergeList);
+
 let ll = new LinkedList();
 ll.insertHead(13);
 ll.insertHead(51);

@@ -1,6 +1,6 @@
 'use strict';
 
-let { LinkedList, Node } = require('../LinkedList.js');
+let { LinkedList, Node } = require('../LinkedList/LinkedList.js');
 
 describe('Testing Linked List', () => {
   test('should create linked list ', () => {
@@ -47,14 +47,12 @@ describe('Testing Linked List', () => {
   });
 
   test('can properly insert multiple nodes', () => {
- 
     let ll = new LinkedList();
     ll.head = new Node(1);
     ll.insertHead(2);
     ll.insertHead(3);
     ll.insertHead(4);
     ll.insertHead(5);
-
     expect(ll.head.next.next.val).toEqual(3);
   });
 });

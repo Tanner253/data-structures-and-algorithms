@@ -24,14 +24,15 @@ class LinkedList {
       if (!this.head) {
         this.head = newNode;
       } else {
-        this.size++;
         newNode.next = this.head;
         this.head = newNode;
+        this.size++;
       }
     } catch (error) {
       console.log('Error with adding a Node to the HEAD: ', error);
     }
   }
+
   append(value) {
     try {
       let current = this.head;
@@ -65,7 +66,7 @@ class LinkedList {
 
   insertBefore(insertBefore, value) {
     let current = this.head;
-    while(current.next.val !== insertBefore){
+    while (current.next.val !== insertBefore) {
       current = current.next;
     }
     let temp = current.next;
@@ -74,9 +75,9 @@ class LinkedList {
     this.size++;
   }
 
-  insertAfter(insertAfter, value){
+  insertAfter(insertAfter, value) {
     let current = this.head;
-    while(current.val !== insertAfter){
+    while (current.val !== insertAfter) {
       current = current.next;
     }
     let temp = current.next;
@@ -94,28 +95,23 @@ class LinkedList {
         current = current.next;
       }
       output += 'NULL';
-      console.log(output);
       return output;
     } catch (e) {
       console.error(e);
     }
   }
 
-  kthFromTheEnd(k){
+  kthFromTheEnd(k) {
     let current = this.head;
     let idx = this.size - k;
-    for(var i = 0 ; i < idx ; i++){
+    for (var i = 0; i < idx; i++) {
       current = current.next;
     }
     console.log(current.val);
     return current.val;
   }
 }
-function zip(list1, list2){ 
-  
-}
-
-
+// function zip(list1, list2) {}
 
 let primaryList = new LinkedList();
 primaryList.insertHead(4);
@@ -126,7 +122,7 @@ mergeList.insertHead(1);
 mergeList.insertHead(2);
 mergeList.insertHead(3);
 
-zip(primaryList, mergeList);
+// zip(primaryList, mergeList);
 
 let ll = new LinkedList();
 ll.insertHead(13);

@@ -21,7 +21,6 @@ Last In First Out
 
 This means that the last item added to the stack will be the first item popped out of the stack.
 
-
 ## Stack
 
 ## Push O(1)

@@ -116,7 +116,7 @@ One strategy for adding a new node to a binary tree is to fill all “child” s
 In the event you would like to have a node placed in a specific location, you need to reference both the new node to create, and the parent node which the child is attached to.
 
 - Big O
-- - The Big O time complexity for inserting a new node is O(n). Searching for a specific node will also be O(n). Because of the lack of organizational structure in a Binary Tree, the worst case for most operations will involve traversing the entire tree. If we assume that a tree has n nodes, then in the worst case we will have to look at n items, hence the O(n) complexity.
+  - The Big O time complexity for inserting a new node is O(n). Searching for a specific node will also be O(n). Because of the lack of organizational structure in a Binary Tree, the worst case for most operations will involve traversing the entire tree. If we assume that a tree has n nodes, then in the worst case we will have to look at n items, hence the O(n) complexity.
 
 - - The Big O space complexity for a node insertion using breadth first insertion will be O(w), where w is the largest width of the tree. For example, in the above tree, w is 4.
 
@@ -125,7 +125,8 @@ In the event you would like to have a node placed in a specific location, you ne
 ## Binary Search Trees BST's
 
 - Searching a BST is EASY!
-- - Searching a BST can be done quickly, because all you do is compare the node you are searching for against the root of the tree or sub-tree. If the value is smaller, you only traverse the left side. If the value is larger, you only traverse the right side.
+  - Searching a BST can be done quickly, because all you do is compare the node you are searching for against the root of the tree or sub-tree. If the value is smaller, you only traverse the left side. If the value is larger, you only traverse the right side.
+
 ```js
 Let’s say we are searching 15. We start by comparing the value 15 to the value of the root, 23.
 

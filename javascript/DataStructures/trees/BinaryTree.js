@@ -50,9 +50,9 @@ startRoot.left.left = new Node(9);
 startRoot.left.right = new Node(9);
 startRoot.right.right = new Node(11);
 startRoot.right.left = new Node(11);
-binaryTree.recursiveBinarySearchPre(binaryTree.root);
-binaryTree.recursiveBinarySearchIn(binaryTree.root);
-binaryTree.recursiveBinarySearchPost(binaryTree.root);
+// binaryTree.recursiveBinarySearchPre(binaryTree.root);
+// binaryTree.recursiveBinarySearchIn(binaryTree.root);
+// binaryTree.recursiveBinarySearchPost(binaryTree.root);
 
 
 

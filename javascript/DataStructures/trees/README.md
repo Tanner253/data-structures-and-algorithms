@@ -140,3 +140,14 @@ Let’s say we are searching 15. We start by comparing the value 15 to the value
 - The Big O time complexity of a Binary Search Tree’s insertion and search operations is O(h), or O(height). In the worst case, we will have to search all the way down to a leaf, which will require searching through as many nodes as the tree is tall. In a balanced (or “perfect”) tree, the height of the tree is log(n). In an unbalanced tree, the worst case height of the tree is n.
 
 - The Big O space complexity of a BST search would be O(1). During a search, we are not allocating any additional space.
+
+
+## Methods
+
+| Method | Summary | Big O Time | Big O Space | Example | 
+| :----------- | :----------- | :-------------: | :-------------: | :----------- |
+| Preorder | traverses Tree in pre order | O(1) | O(1) | RecursiveBinarySearchPre(Node node) |
+| inOrder | traverses a tree IN order| O(n) | O(1) | RecursiveBinarySearchInOrder(Node node) |
+| postorder | Traverses a tree in Post o rder | O(n) | O(1) | RecursiveBinarySearchPostOrder(Node node) |
+BINARY SEARCH TREE is O(log n)
+				

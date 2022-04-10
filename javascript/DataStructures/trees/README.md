@@ -149,5 +149,5 @@ Let’s say we are searching 15. We start by comparing the value 15 to the value
 | Preorder | traverses Tree in pre order | O(1) | O(1) | RecursiveBinarySearchPre(Node node) |
 | inOrder | traverses a tree IN order| O(n) | O(1) | RecursiveBinarySearchInOrder(Node node) |
 | postorder | Traverses a tree in Post o rder | O(n) | O(1) | RecursiveBinarySearchPostOrder(Node node) |
-BINARY SEARCH TREE is O(log n)
+BINARY SEARCH TREE is O(n log(n))
 				

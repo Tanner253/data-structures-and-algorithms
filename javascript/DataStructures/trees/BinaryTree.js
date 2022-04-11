@@ -1,5 +1,6 @@
 "use strict";
 
+let list = [];
 const Node = require('./Node.js');
 class BinaryTree {
   constructor(node) {
@@ -8,13 +9,14 @@ class BinaryTree {
 
   recursiveBinarySearchPre(root) {
     if (root !== null) {
-      console.log(root.value);
+      list.push(root.value);
       if(root.left !== null){
         this.recursiveBinarySearchPre(root.left);
       }
       if(root.right !== null){
         this.recursiveBinarySearchPre(root.right);
       }
+      return list;
     }
   }
   recursiveBinarySearchIn(root) {
@@ -50,7 +52,9 @@ startRoot.left.left = new Node(9);
 startRoot.left.right = new Node(9);
 startRoot.right.right = new Node(11);
 startRoot.right.left = new Node(11);
-// binaryTree.recursiveBinarySearchPre(binaryTree.root);
+let arr = binaryTree.recursiveBinarySearchPre(binaryTree.root);
+let max = Math.max(...arr);
+console.log(max);
 // binaryTree.recursiveBinarySearchIn(binaryTree.root);
 // binaryTree.recursiveBinarySearchPost(binaryTree.root);
 

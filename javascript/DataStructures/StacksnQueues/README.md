@@ -1,5 +1,6 @@
 # Stacks and Queues
 
+
 ![Whiteboard solution to code challenge balanced brackets](./assets/Whiteboard%20(1).png)
 
 # What is a Stack

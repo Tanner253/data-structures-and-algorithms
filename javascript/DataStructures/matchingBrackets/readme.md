@@ -1,7 +1,7 @@
 
 # Challenge Type: Code Challenge / Algorithm
 
-[Whiteboard solution to code challenge balanced brackets](./assets/Whiteboard%20(1).png)
+![Whiteboard solution to code challenge balanced brackets](./assets/Whiteboard%20(1).png)
 
 Feature Tasks
 Write a function called validate brackets

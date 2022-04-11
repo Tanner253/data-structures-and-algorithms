@@ -1,7 +1,5 @@
 # Stacks and Queues
 
-[Whiteboard solution to code challenge balanced brackets](./assets/Whiteboard%20(1).png)
-
 # What is a Stack
 A stack is a data structure that consists of Nodes. Each Node references the next Node in the stack, but does not reference its previous.
 

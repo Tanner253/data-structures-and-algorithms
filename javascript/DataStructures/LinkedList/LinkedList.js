@@ -110,6 +110,31 @@ class LinkedList {
     console.log(current.val);
     return current.val;
   }
+
+  zipTwoLists(A, B) {
+    //sets the starting node reference
+    let ACurr = A.head;
+    let BCurr = B.head;
+    // While neither list is null, add the values to the new list alternatively
+    while (ACurr !== null && BCurr !== null) {
+
+      this.append(ACurr.value);
+      this.append(BCurr.value);
+      ACurr = ACurr.next;
+      BCurr = BCurr.next;
+    }
+    // if one list is longer and the algorithm breaks out of the while loop, add the rest of the values to the new list
+    if (BCurr) {
+      while (BCurr !== null) {
+        this.append(BCurr.value);
+        BCurr = BCurr.next;
+      }
+    } else if (ACurr) {
+      while (ACurr !== null) {
+        this.append(ACurr.value);
+        ACurr = ACurr.next;
+      }
+    
 }
 // function zip(list1, list2) {}
 

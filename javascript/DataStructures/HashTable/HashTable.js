@@ -21,7 +21,7 @@ class HashTable {
 
     let initialHash = asciiSum * 599;
 
-    return initialHash % 1024
+    return initialHash % 1024;
   }
 
   // set
@@ -84,13 +84,15 @@ class HashTable {
   }
 }
 
-let table  = new HashTable(1024);
-console.log(table);
-console.log(table.hash('Ryan'));
-table.set('Ryan', 47);
-table.set('Jacob', 32);
-table.set('Audrey', {name: 'Audrey'});
-console.log('table:', table);
-console.log('Ryan: ', table.get('Ryan'));
-console.log('Jacob: ', table.get('Jacob'));
-console.log('Audrey: ',table.get('Audrey'));
+// let table  = new HashTable(1024);
+// console.log(table);
+// console.log(table.hash('Ryan'));
+// table.set('Ryan', 47);
+// table.set('Jacob', 32);
+// table.set('Audrey', {name: 'Audrey'});
+// console.log('table:', table);
+// console.log('Ryan: ', table.get('Ryan'));
+// console.log('Jacob: ', table.get('Jacob'));
+// console.log('Audrey: ',table.get('Audrey'));
+
+module.exports = HashTable;

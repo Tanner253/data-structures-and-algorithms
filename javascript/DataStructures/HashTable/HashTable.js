@@ -61,7 +61,27 @@ class HashTable {
     }
   }
 
-  // contains - I'll leave this to you all
+  contains(key){
+    let position = this.hash(key);
+
+    if(this.buckets[position] === null){
+      this.buckets[position] = new LinkedList();
+      return false;
+    }
+    return true;
+  }
+
+  printKeys(){
+    for(let i = 0 ; i < this.buckets.length; i++){
+      if(this.buckets[i] !== null){
+        console.log(`Bucket: ${i}`);
+        this.buckets[i].forEach(element => {
+          console.log(`${element.key} : ${element.value}`)
+        });
+        console.log('null');
+      }
+    }
+  }
 }
 
 let table  = new HashTable(1024);

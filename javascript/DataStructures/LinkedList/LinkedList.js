@@ -134,7 +134,21 @@ class LinkedList {
         this.append(ACurr.value);
         ACurr = ACurr.next;
       }
-    
+
+    }
+  }
+
+  findMiddle() {
+    let current = this.head;
+    let runner = this.head;
+    while (runner !== null && runner.next !== null) {
+      current = current.next;
+      runner = runner.next.next;
+    }
+    console.log('middle', current.val);
+    return current.val;
+
+  }
 }
 // function zip(list1, list2) {}
 
@@ -159,6 +173,7 @@ ll.insertHead(999);
 console.log(ll.head.value);
 console.log(ll.includes(999));
 console.log(ll.toString());
+ll.findMiddle();
 ll.append(8888);
 console.log(ll.toString());
 ll.insertBefore(8888, 7777);
@@ -168,4 +183,10 @@ console.log(ll.toString());
 console.log(ll.size);
 ll.kthFromTheEnd(3);
 
+
+
+
+
 module.exports = { LinkedList, Node };
+
+

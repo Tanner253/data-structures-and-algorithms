@@ -60,3 +60,4 @@ console.log(max);
 
 
 
+module.exports = BinaryTree;
